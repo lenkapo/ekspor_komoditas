@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 25, 2025 at 11:00 AM
+-- Generation Time: Nov 26, 2025 at 12:26 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -143,7 +143,9 @@ INSERT INTO `alus_mg` (`menu_id`, `menu_parent`, `menu_nama`, `menu_uri`, `menu_
 (96, 92, 'Laporan Keuangan', 'laporan_keuangan', '', 'fa fa-folder-open-o fa-fw', 6),
 (97, 86, 'Grafik Ekspor ', 'grafik_ekspor', '', 'fa fa-check-square-o fa-f', 5),
 (98, 86, 'Peta Ekspor', 'peta_ekspor', '', 'fa fa-check-square-o fa-f', 5),
-(99, 86, 'Manajemen Stok', 'manajemen_stok', '', 'fa fa-check-square-o fa-f', 5);
+(99, 86, 'Manajemen Stok', 'manajemen_stok', '', 'fa fa-check-square-o fa-f', 5),
+(100, 99, 'Stok Inbound', 'manajemen_stok_inbound', '', 'fa fa-edit fa-fw', 5),
+(101, 99, 'Stok Outbond', 'manajemen_stok_outbound', '', 'fa fa-pencil-square-o fa-', 5);
 
 -- --------------------------------------------------------
 
@@ -178,30 +180,32 @@ INSERT INTO `alus_mga` (`id`, `id_group`, `id_menu`, `can_view`, `can_edit`, `ca
 (3686, 9, 30, 1, 0, 0, 0, '1970-01-01 12:00:00', '1970-01-01 12:00:00', '1970-01-01 00:00:00', '1970-01-01 00:00:00'),
 (3687, 9, 12, 1, 0, 0, 0, '1970-01-01 12:00:00', '1970-01-01 12:00:00', '1970-01-01 00:00:00', '1970-01-01 00:00:00'),
 (3688, 9, 13, 1, 0, 0, 0, '1970-01-01 12:00:00', '1970-01-01 12:00:00', '1970-01-01 00:00:00', '1970-01-01 00:00:00'),
-(4119, 1, 30, 1, 0, 0, 0, '2016-09-06 10:55:00', '2016-09-06 10:56:00', '2016-08-08 12:06:00', '2016-08-08 12:06:00'),
-(4120, 1, 11, 1, 1, 1, 1, '2016-09-06 10:55:00', '2016-09-06 10:55:00', '2016-08-08 12:06:00', '2016-08-09 13:50:00'),
-(4121, 1, 12, 1, 1, 1, 1, '2016-09-06 10:55:00', '2016-09-06 10:55:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
-(4122, 1, 13, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
-(4123, 1, 80, 0, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
-(4124, 1, 81, 0, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
-(4125, 1, 82, 0, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
-(4126, 1, 83, 0, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
-(4127, 1, 84, 1, 0, 0, 0, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
-(4128, 1, 85, 1, 0, 0, 0, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
-(4129, 1, 88, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
-(4130, 1, 89, 1, 0, 0, 0, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
-(4131, 1, 86, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
-(4132, 1, 91, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
-(4133, 1, 97, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
-(4134, 1, 98, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
-(4135, 1, 99, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
-(4136, 1, 87, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
-(4137, 1, 90, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
-(4138, 1, 92, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
-(4139, 1, 93, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
-(4140, 1, 94, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
-(4141, 1, 95, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
-(4142, 1, 96, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00');
+(4168, 1, 30, 1, 0, 0, 0, '2016-09-06 10:55:00', '2016-09-06 10:56:00', '2016-08-08 12:06:00', '2016-08-08 12:06:00'),
+(4169, 1, 11, 1, 1, 1, 1, '2016-09-06 10:55:00', '2016-09-06 10:55:00', '2016-08-08 12:06:00', '2016-08-09 13:50:00'),
+(4170, 1, 12, 1, 1, 1, 1, '2016-09-06 10:55:00', '2016-09-06 10:55:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
+(4171, 1, 13, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
+(4172, 1, 80, 0, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
+(4173, 1, 81, 0, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
+(4174, 1, 82, 0, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
+(4175, 1, 83, 0, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
+(4176, 1, 84, 1, 0, 0, 0, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
+(4177, 1, 85, 1, 0, 0, 0, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
+(4178, 1, 88, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
+(4179, 1, 89, 1, 0, 0, 0, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
+(4180, 1, 86, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
+(4181, 1, 91, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
+(4182, 1, 97, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
+(4183, 1, 98, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
+(4184, 1, 99, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
+(4185, 1, 100, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
+(4186, 1, 101, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
+(4187, 1, 87, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
+(4188, 1, 90, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
+(4189, 1, 92, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
+(4190, 1, 93, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
+(4191, 1, 94, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
+(4192, 1, 95, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00'),
+(4193, 1, 96, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00');
 
 -- --------------------------------------------------------
 
@@ -243,7 +247,7 @@ CREATE TABLE `alus_u` (
 --
 
 INSERT INTO `alus_u` (`id`, `username`, `job_title`, `abc`, `ip_address`, `ghi`, `def`, `mno`, `jkl`, `stu`, `pqr`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`, `ht`, `picture`, `mdo_id`, `mos_id`, `grup_type`, `bpd_id`, `bpd_id_2`, `staff_pmk_id`) VALUES
-(64, 'admins', 'admins', 'MTIzNDU2Nzg5MDEyMzQ1Nvqvv5U+5Kixew57njDPeg==', '::1', '$2y$08$NnsYVFM6th8.K6bZTER2seeOAT5S3eNdZLwtCubkc4qKwJzfDa5cO', 'xEfWFClsAdO4BnNm', '', NULL, 1763708411, '', 1469523580, 1764035298, 1, 'Master Admin', '', '', '11', 0, '1496118042.jpg', NULL, NULL, NULL, NULL, NULL, NULL),
+(64, 'admins', 'admins', 'MTIzNDU2Nzg5MDEyMzQ1Nvqvv5U+5Kixew57njDPeg==', '::1', '$2y$08$NnsYVFM6th8.K6bZTER2seeOAT5S3eNdZLwtCubkc4qKwJzfDa5cO', 'xEfWFClsAdO4BnNm', '', NULL, 1763708411, '', 1469523580, 1764146907, 1, 'Master Admin', '', '', '11', 0, '1496118042.jpg', NULL, NULL, NULL, NULL, NULL, NULL),
 (66, 'DINAS PENDIDIKAN', 'DINAS PENDIDIKAN', 'MTIzNDU2Nzg5MDEyMzQ1Nv2quZ4/3a+0fSdy3TLJexUMnGM=', '::1', '$2y$08$VUKn/N/Oz3h/8IB7somj3ODzqJ3cGYVnLbUw/QESB9MVhCV.zeInG', 'Qoc9aAIiYkGjg9IZ', NULL, NULL, NULL, NULL, 1542868087, 1550991198, 1, 'DINAS PENDIDIKAN', '', NULL, '0', 0, 'avatar_default.png', NULL, 2, NULL, NULL, NULL, NULL),
 (69, 'KECAMATAN MALINAU KOTA', 'KECAMATAN MALINAU KOTA', 'MTIzNDU2Nzg5MDEyMzQ1Nvqlppk5z7y8cidy3TLJexUMnGM=', '::1', '$2y$08$El7EPObwt.3SXLXC/Ra/Pe038PDY5nrJWQJ0Ol8H9dwGC.rU45Ed6', '60TGEWENwJbU2E.t', NULL, NULL, NULL, NULL, 1542868123, 1549271960, 1, 'KECAMATAN MALINAU KOTA', NULL, NULL, '0', 0, 'avatar_default.png', NULL, 5, NULL, NULL, NULL, NULL),
 (71, 'DINAS PERHUBUNGAN', 'DINAS PERHUBUNGAN', 'MTIzNDU2Nzg5MDEyMzQ1NuuqvJsjzb2wcRJn1T3gcFYOmmJogoKq', '::1', '$2y$08$/KMY9ZSiaLqSNvbQ60A.Gu.pNmuM.rQMm6y5Fa6pgGz2xTNi/6bUu', 'UHVMoXEIQ1Jdlkc/', NULL, NULL, NULL, NULL, 1542868139, NULL, 1, 'DINAS PERHUBUNGAN', NULL, NULL, '0', 0, 'avatar_default.png', NULL, 7, NULL, NULL, NULL, NULL),
@@ -692,13 +696,13 @@ CREATE TABLE `tb_ikan` (
 --
 
 INSERT INTO `tb_ikan` (`id_ikan`, `nama_produk`, `tanggal_transaksi`, `nama_latin`, `jenis_olahan`, `grade`, `asal_wilayah`, `negara_tujuan`, `id_pelabuhan_asal`, `stok_kg`, `harga_usd`, `biaya_operasional`, `gambar`, `created_by`, `created_at`, `updated_at`, `lot_number_fk`) VALUES
-(1, 'Yellowfin Tuna Loin', NULL, 'Thunnus albacares', 'Frozen', 'AAA / Sashimi Grade', 'WPP 714 (Laut Banda)', 'Jepang', NULL, 5000, '14.50', '0.00', 'default.png', 'admin', '2025-01-10 01:00:00', '2025-11-25 09:17:02', 'LOT_DEFAULT_123'),
-(2, 'Skipjack Tuna', NULL, 'Katsuwonus pelamis', 'Canned', 'Standard', 'WPP 572 (Samudera Hindia)', 'Amerika Serikat', NULL, 12000, '3.20', '0.00', 'default.png', 'admin', '2025-01-12 02:30:00', '2025-11-25 09:17:02', 'LOT_DEFAULT_123'),
-(3, 'Udang Vaname', NULL, 'Litopenaeus vannamei', 'Frozen', 'Size 30-40', 'Tambak Lampung', 'Tiongkok', NULL, 8500, '6.80', '0.00', 'default.png', 'user_budi', '2025-02-05 07:00:00', '2025-11-25 09:17:02', 'LOT_DEFAULT_123'),
-(4, 'Kerapu Macan', NULL, 'Epinephelus fuscoguttatus', 'Live', 'Premium Live', 'WPP 712 (Laut Jawa)', 'Hong Kong', NULL, 500, '25.00', '0.00', 'default.png', 'admin', '2025-02-20 03:00:00', '2025-11-25 09:17:02', 'LOT_DEFAULT_123'),
-(5, 'Kakap Merah', NULL, 'Lutjanus campechanus', 'Fillet', 'Grade A', 'WPP 711', 'Australia', NULL, 2000, '9.75', '0.00', 'default.png', 'user_joko', '2025-02-22 04:15:00', '2025-11-25 09:17:02', 'LOT_DEFAULT_123'),
-(6, 'Udang Vaname', NULL, 'Litopenaeus vannamei', 'Frozen', 'AAA / Sashimi Grade', NULL, 'China', NULL, 15000, '15.30', '2.00', 'default.png', 'admins', '2025-11-24 06:38:24', '2025-11-25 09:17:02', 'LOT_DEFAULT_123'),
-(7, 'Udang Vaname', '2025-11-25', 'Litopenaeus vannamei', 'Fresh', 'Grade A', NULL, 'Jepang', 2, 1500, '60000000.00', '10.00', 'default.png', 'admins', '2025-11-25 05:21:35', '2025-11-25 09:17:02', 'LOT_DEFAULT_123');
+(1, 'Yellowfin Tuna Loin', NULL, 'Thunnus albacares', 'Frozen', 'AAA / Sashimi Grade', 'WPP 714 (Laut Banda)', 'Jepang', NULL, 5000, '14.50', '0.00', 'default.png', 'admin', '2025-01-10 01:00:00', '2025-11-26 10:40:10', NULL),
+(2, 'Skipjack Tuna', NULL, 'Katsuwonus pelamis', 'Canned', 'Standard', 'WPP 572 (Samudera Hindia)', 'Amerika Serikat', NULL, 12000, '3.20', '0.00', 'default.png', 'admin', '2025-01-12 02:30:00', '2025-11-26 10:40:13', NULL),
+(3, 'Udang Vaname', NULL, 'Litopenaeus vannamei', 'Frozen', 'Size 30-40', 'Tambak Lampung', 'Tiongkok', NULL, 8500, '6.80', '0.00', 'default.png', 'user_budi', '2025-02-05 07:00:00', '2025-11-26 10:40:19', NULL),
+(4, 'Kerapu Macan', NULL, 'Epinephelus fuscoguttatus', 'Live', 'Premium Live', 'WPP 712 (Laut Jawa)', 'Hong Kong', NULL, 500, '25.00', '0.00', 'default.png', 'admin', '2025-02-20 03:00:00', '2025-11-26 10:40:21', NULL),
+(5, 'Kakap Merah', NULL, 'Lutjanus campechanus', 'Fillet', 'Grade A', 'WPP 711', 'Australia', NULL, 2000, '9.75', '0.00', 'default.png', 'user_joko', '2025-02-22 04:15:00', '2025-11-26 10:40:26', NULL),
+(6, 'Udang Vaname', NULL, 'Litopenaeus vannamei', 'Frozen', 'AAA / Sashimi Grade', NULL, 'China', NULL, 15000, '15.30', '2.00', 'default.png', 'admins', '2025-11-24 06:38:24', '2025-11-26 10:39:53', NULL),
+(7, 'Udang Vaname', '2025-11-25', 'Litopenaeus vannamei', 'Fresh', 'Grade A', NULL, 'Jepang', 2, 1500, '60000000.00', '10.00', 'default.png', 'admins', '2025-11-25 05:21:35', '2025-11-26 10:39:49', NULL);
 
 -- --------------------------------------------------------
 
@@ -831,6 +835,14 @@ CREATE TABLE `tb_stok` (
   `tanggal_kadaluarsa` date DEFAULT NULL,
   `status_kualitas` enum('Lolos Uji','Karantiina','Ditolak') DEFAULT 'Lolos Uji'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tb_stok`
+--
+
+INSERT INTO `tb_stok` (`id_stok`, `lot_number`, `komoditas`, `sumber_asal`, `stok_tersedia_kg`, `stok_dialokasikan_kg`, `tanggal_masuk`, `tanggal_kadaluarsa`, `status_kualitas`) VALUES
+(1, 'VANAME-B001-2025', 'Udang Vaname Size 40', 'Tambak Cirebon', '10000.00', '5000.00', '2025-11-20', '2026-05-20', 'Lolos Uji'),
+(2, 'TUNA-BOO2-2025', 'Tuna Loin', 'KAPAL KM Bahari', '100.00', '0.00', '2025-11-26', '2025-11-26', '');
 
 -- --------------------------------------------------------
 
@@ -88223,7 +88235,8 @@ ALTER TABLE `tb_detail_pesanan`
 --
 ALTER TABLE `tb_ikan`
   ADD PRIMARY KEY (`id_ikan`),
-  ADD KEY `id_pelabuhan_asal` (`id_pelabuhan_asal`);
+  ADD KEY `id_pelabuhan_asal` (`id_pelabuhan_asal`),
+  ADD KEY `fk_ikan_stok` (`lot_number_fk`);
 
 --
 -- Indexes for table `tb_koordinat_negara`
@@ -88304,19 +88317,19 @@ ALTER TABLE `alus_gd`
 -- AUTO_INCREMENT for table `alus_la`
 --
 ALTER TABLE `alus_la`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `alus_mg`
 --
 ALTER TABLE `alus_mg`
-  MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
+  MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
 
 --
 -- AUTO_INCREMENT for table `alus_mga`
 --
 ALTER TABLE `alus_mga`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4143;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4194;
 
 --
 -- AUTO_INCREMENT for table `alus_u`
@@ -88442,7 +88455,7 @@ ALTER TABLE `tb_produk`
 -- AUTO_INCREMENT for table `tb_stok`
 --
 ALTER TABLE `tb_stok`
-  MODIFY `id_stok` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_stok` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
@@ -88474,6 +88487,7 @@ ALTER TABLE `tb_detail_pesanan`
 -- Constraints for table `tb_ikan`
 --
 ALTER TABLE `tb_ikan`
+  ADD CONSTRAINT `fk_ikan_stok` FOREIGN KEY (`lot_number_fk`) REFERENCES `tb_stok` (`lot_number`) ON UPDATE CASCADE,
   ADD CONSTRAINT `tb_ikan_ibfk_1` FOREIGN KEY (`id_pelabuhan_asal`) REFERENCES `tb_pelabuhan` (`id_pelabuhan`);
 COMMIT;
 

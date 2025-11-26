@@ -95,10 +95,7 @@
                 <label>Gambar</label>
                 <input type="file" name="userfile">
             </div>
-            <div class="form-group">
-                <label>Tanggal Transaksi (Pengiriman/Pencatatan)</label>
-                <input type="date" class="form-control" name="tanggal_transaksi" required>
-            </div>
+
             <div class="form-group">
                 <label>Biaya Operasional (Shipping/Packing/dll)</label>
                 <div class="input-group">
