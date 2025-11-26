@@ -1,0 +1,11 @@
+# CodeIgniter 3 specific
+/application/cache/*
+/application/logs/*
+!/application/logs/index.html
+/application/config/database.php # Jika berisi kredensial sensitif
+
+# Vendor libraries (e.g., if you use Composer)
+/vendor/
+
+# Environment files
+.env
