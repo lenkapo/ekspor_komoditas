@@ -7,6 +7,7 @@ class Manajemen_stok_inbound extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Model', 'Alus_items');
+        $this->load->model('manajemen_stok_inbound/Model', 'Stok');
     }
 
     public function index()
